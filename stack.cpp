@@ -3,9 +3,8 @@
 
 using namespace std;
 
-
 Stack::Stack() {
-	Node* top = nullptr;
+	top = nullptr;
 }
 
 Stack::~Stack() {
@@ -22,12 +21,14 @@ bool Stack::isFull() {
 		return true;
 	}
 }
+
 bool Stack::isEmpty() {
 	if (top == nullptr)
 		return true;
 	else
 		return false;
 }
+
 void Stack::push(const Card& item) {
 	sizenum++;
 	Node* current = new Node;
@@ -35,6 +36,7 @@ void Stack::push(const Card& item) {
 	current->next = top;
 	top = current;
 }
+
 void Stack::pop() {
 	if (isEmpty()) {
 		cout << "Stack is empty, cannot remove item from stack";
@@ -47,9 +49,15 @@ void Stack::pop() {
 		delete temp;
 	}
 }
+
 Card Stack::peek() {
-	return top->data;
+	if (isEmpty()) {
+		cout << "stack is empty";
+	}
+	else
+		return top->data;
 }
-int Stack::size() {
+
+int Stack::size(){
 	return sizenum;
 }

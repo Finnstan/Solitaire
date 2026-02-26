@@ -10,14 +10,11 @@ private:
 		Node* next;
 	};
 	Node* top;
-	int sizenum;
+	int sizenum = 0;
 public:
 
 	// constructor
 	Stack();
-
-	//getters
-	Card getData();
 
 	// stack functions
 	bool isFull();
