@@ -73,6 +73,7 @@ void Solitaire::dealCards() {
 		// put cards into a tableau
 		for (int j = 0; j < cardsToDeal; j++) {
 			tableau[i].push(deck[index++]);
+			tableau[i].peek();
 		};
 	};
 	// display the tableau's
@@ -85,7 +86,7 @@ void Solitaire::displayTableau() {
 
 	// get max height of the stack(s)
 	// needed in case someone adds onto a stack so we need to know how many rows to print
-	// e.g. we intially had 7 rows, user added a card to a stack with 7, now we need 8 rows
+	// e.g. we initially had 7 rows, user added a card to a stack with 7, now we need 8 rows
 	for (int col = 0; col < 8; col++) {
 		int height = tableau[col].size();
 		if (height > maxHeight) {
@@ -145,3 +146,7 @@ void Solitaire::displayTableau() {
 		cout << endl;
 	};
 };
+
+void Solitaire::gamePlay() {
+
+}

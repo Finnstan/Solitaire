@@ -22,6 +22,7 @@ public:
 	void shuffleDeck();
 	void dealCards();
 	void displayTableau();
+	void gamePlay();
 };
 
 #endif
